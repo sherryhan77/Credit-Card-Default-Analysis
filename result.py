@@ -1,4 +1,9 @@
 def result(y_test, y_prediction):
+    """
+    b=result(y_test, y_prediction)
+    a=result(y_test1, y_prediction1)
+    pd.DataFrame([b,a,...])
+    """
     tp=0
     fp=0
     tn=0
