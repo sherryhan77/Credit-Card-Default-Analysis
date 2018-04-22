@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% block head %}
+      <title>Credit Card Default</title>
+      <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}">
+    {% endblock %}
+  </head>
+<body>
+  <div class=header>
+    <h1>Credit Card Default Data Analysis</h1>
+  </div>
+  <div class=page>
+    {% block content %}{% endblock %}
+  </div>
+  <div class=footer>
+    {% block footer %}
+      <span>All rights reserved</span>
+    {% endblock %}
+  </div>
+</body>

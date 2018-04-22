@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>Credit Card Default Analysis</title>
+	</head>
+	<body>
+		<h2>   Welcome to our Credit Card Analysis   </h2>
+		<h1>Credit Card Default Analysis</h1>
+		{% for link in links %}
+			<a href="{{ link.href }}">{{ link.label }}</a><br>
+		{% endfor %}
+	</body>
+</html>
+<!--
+{% extends "layout.html" %}
+{% block content %}
+  {% if session.data_loaded %}
+	  <div class="links">
+	  {% for link in links %}
+	    	<a href="{{link.href}}">{{link.label}}</a>
+	  {% endfor %}
+	  <div>
+  {% else %}
+    <div class="app-error"> Oops! Data wasn't loaded properly</div>
+  {% endif %}
+{% endblock %}
+-->

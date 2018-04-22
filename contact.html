@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+   <body>
+   
+      <h2 style = "text-align: center;">Contact Form</h2>
+		
+      {% for message in form.Age.errors %}
+         <div>{{ message }}</div>
+      {% endfor %}
+      
+      <form action = "http://localhost:5000/contact" method = post>
+         <fieldset>
+            <legend>Information</legend>
+            {{ form.hidden_tag() }}
+            
+            <div style = font-size:20px; font-weight:bold; margin-left:150px;>
+               {{ form.Age.label }}<br>
+               {{ form.Age }}
+               <br>
+
+
+               {{ form.MARRIAGE.label }}<br>
+               {{ form.MARRIAGE }}
+               <br>
+               
+
+
+
+               {{ form.Gender.label }} {{ form.Gender }}
+               {{ form.Education.label }}<br>
+               {{ form.Education }}
+               <br>
+
+               
+               {{ form.PAY_0.label }}<br>
+               {{ form.PAY_0 }}
+               <br>
+
+               {{ form.PAY_2.label }}<br>
+               {{ form.PAY_2 }}
+               <br>
+
+               {{ form.PAY_3.label }}<br>
+               {{ form.PAY_3 }}
+               <br>
+
+
+               {{ form.PAY_4.label }}<br>
+               {{ form.PAY_4 }}
+               <br>
+
+               {{ form.PAY_5.label }}<br>
+               {{ form.PAY_5 }}
+               <br>
+
+               {{ form.PAY_6.label }}<br>
+               {{ form.PAY_6 }}
+               <br>
+
+
+               {{ form.BILL_AMT1.label }}<br>
+               {{ form.BILL_AMT1 }}
+               <br>
+
+
+               {{ form.BILL_AMT2.label }}<br>
+               {{ form.BILL_AMT2 }}
+               <br>
+
+               {{ form.BILL_AMT3.label }}<br>
+               {{ form.BILL_AMT3 }}
+               <br>
+
+               {{ form.BILL_AMT4.label }}<br>
+               {{ form.BILL_AMT4 }}
+               <br>
+
+               {{ form.BILL_AMT5.label }}<br>
+               {{ form.BILL_AMT5 }}
+               <br>
+
+               {{ form.BILL_AMT6.label }}<br>
+               {{ form.BILL_AMT6 }}
+               <br>
+
+
+                {{ form.PAY_AMT1.label }}<br>
+               {{ form.PAY_AMT1 }}
+               <br>
+
+
+               {{ form.PAY_AMT2.label }}<br>
+               {{ form.PAY_AMT2 }}
+               <br>
+
+               {{ form.PAY_AMT3.label }}<br>
+               {{ form.PAY_AMT3 }}
+               <br>
+
+               {{ form.PAY_AMT4.label }}<br>
+               {{ form.PAY_AMT4 }}
+               <br>
+
+               {{ form.PAY_AMT5.label }}<br>
+               {{ form.PAY_AMT5 }}
+               <br>
+
+               {{ form.PAY_AMT6.label }}<br>
+               {{ form.PAY_AMT6 }}
+               <br>
+
+
+               
+               
+               {{ form.submit }}
+            </div>
+            
+         </fieldset>
+      </form>
+      
+   </body>
+</html>
