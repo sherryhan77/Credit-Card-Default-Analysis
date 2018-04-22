@@ -19,12 +19,16 @@ def result(y_test, y_prediction):
     f = 2 * precision*tpr/(precision+tpr)
     accuracy = (tp+tn)/(tp+tn+fp+fn)
     misclassification_rate = (fp + fn)/(tp+fp+tn+fn)
-    print("Precision:\t\t%1.2f identified as mines are mines"%precision)
-    print("Recall:\t\t\t%1.2f proportion of actual mines identified"%tpr)
-    print("Specificity:\t\t%1.2f proportion of rocks identified as rocks"%tnr)
-    print("False Positive Rate:\t%1.2f proportion of rocks identified as mines"%fpr)
-    print("f-score:\t\t%1.2f tradeoff between precision and recall"%f)
-    print("Accuracy:\t\t%1.2f how well the model has classified"%accuracy)
+
+    print("Precision:\t\t%1.2f "%precision)
+    print("Recall:\t\t\t%1.2f "%tpr)
+    print("Specificity:\t\t%1.2f "%tnr)
+    print("False Positive Rate:\t%1.2f "%fpr)
+    print("f-score:\t\t%1.2f "%f)
+    print("Accuracy:\t\t%1.2f "%accuracy)
     # print("Misclassification Rate:\t\t%1.2f how well the model has classified"%accuracy)
     print("tp:\t\t\t{}\nfp:\t\t\t{}\ntn:\t\t\t{}\nfn:\t\t\t{}".format(tp,fp,tn,fn))
+    return ({'Precision':precision,'Recall':tpr, 'Specificity':tnr,'False Positive Rate':fpr,
+             'f-score':f, 'Accuracy':accuracy,'tp':tp,'fp':fp,'tn':tn,'fn':fn})
+        
         
