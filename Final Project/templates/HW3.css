@@ -1,0 +1,40 @@
+
+body {
+    background-color: #333;
+    font-family:unkempt;
+    font-weight:400;
+    color: floralwhite;
+     padding:  0 2em 0 2em;
+     font-size:90%;
+  }
+  .navbar-text{
+    font-family: monospace; 
+    font-size: xx-large; 
+    font-weight: bold;
+    color: rgb(155, 100, 13); }
+  
+  h2{
+     text-shadow: 0 5px 25px rgba(0,0,0,0.5);
+  
+  }
+  /* table, th, td {border: 1px solid black;}  */
+  
+  table#comparison thead{text-align:center; color: rgb(86, 4, 34); background-color: rgb(252, 191, 193)}
+  table#comparison td{background-color:rgb(252, 191, 193); text-align:left; }
+  
+  th, td {padding: 15px; text-align:center;}
+  table#t02 tr:nth-child(even) {color: black; background-color: rgb(255, 230, 204);}
+        table#t02 tr:nth-child(odd) {color: black; background-color: rgb(252, 236, 219);}
+         table#t02 th {color: black;background-color: rgb(252, 207, 161); text-align:center;}
+          
+  h1{font-size:4em;padding-bottom:0.25em;border: dashed rgba(255,255,255,0.50);border-width:0 0 1px 0;}
+  .title {color:rgb(219, 121, 24);
+   text-shadow: 1px 1px 2px rgb(86, 55, 6), 0 0 25px rgb(234, 156, 32), 0 0 5px rgb(234, 156, 32);}
+  .links{color:rgb(239, 159, 21);}
+
+  .inline-block {
+    display: inline-block;
+ }
+  
+  
+  

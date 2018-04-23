@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+<div >
+	<table  style="width:80%" align="center">
+	<thead>
+		<tr><th>Method  </th><th> Result</th>  </tr>
+	</thead>
+
+	<tbody>
+	{% for table in df %}
+		<tr><td>{{table[0]}}</td> <td>{{table[1]}}</td>></tr>
+		{% endfor %} 
+	</tbody>
+	</table>
+</div>
+<div class="actions">
+	<a href="/data">Back</a>
+</div>
+{% endblock %}

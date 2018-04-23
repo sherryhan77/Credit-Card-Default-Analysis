@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block content %}
+  <form action="#" method="post">
+    {{ form1.attributes }}
+    {{ form1.hidden_tag() }}
+    <input type="submit"/>
+  </form>
+
+  <p>Monthly Bill Amount Different Age Groups </p>
+  <form action="#" method="post">
+    {{ form2.attributes }}
+    {{ form2.hidden_tag() }}
+    <input type="submit"/>
+  </form>
+
+  <p>Monthly Bill Amount for Groups with Different Marriage Status</p>
+  <form action="#" method="post">
+    
+    {{ form3.attributes }}
+    {{ form3.hidden_tag() }}
+    <input type="submit"/>
+  </form>
+
+  <div class="actions">
+  	<a href="/">Back</a>
+  </div>
+{% endblock %}

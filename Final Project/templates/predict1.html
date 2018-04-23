@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block content %}
+    <html>
+    <body>
+    
+        <form action = "http://localhost:5000/predict2" method = "POST">
+            
+            <p>Amount of given credit in NT dollars <input type = "number" name = "LIMIT_BAL" value="10000" /></p>
+            <p>SEX <input type = "number" name = "SEX" value="1"/></p>
+            <p>EDUCATION <input type = "number" name = "EDUCATION" value="1"/></p>
+            <p>MARRIAGE <input type = "number" name = "MARRIAGE" value="1"/></p>
+            <p>AGE <input type ="number" name = "AGE" value="1"/></p>
+            <p>Repayment status in September, 2005 <input type ="number" name = "PAY_0" value="1"/></p>
+            <p>Repayment status in August, 2005 <input type ="number" name = "PAY_2" value="2"/></p>
+            <p>Repayment status in July, 2005 <input type ="number" name = "PAY_3" value="3"/></p>
+            <p>Repayment status in June, 2005 <input type ="number" name = "PAY_4" value="4"/></p>
+            <p>Repayment status in May, 2005 <input type ="number" name = "PAY_5" value="2"/></p>
+            <p>Repayment status in April, 2005 <input type ="number" name = "PAY_6" value="1"/></p>
+
+
+
+            <p>Amount of credit statement in September, 2005 <input type ="number" name = "CREDIT_AMT1" value="12222"/></p>
+            <p>Amount of credit statement in August, 2005 <input type ="number" name = "CREDIT_AMT2" value="10000"/></p>
+            <p>Amount of credit statement in July, 2005 <input type ="number" name = "CREDIT_AMT3" value="123000"/></p>
+            <p>Amount of credit statement in June, 2005 <input type ="number" name = "CREDIT_AMT4" value="1000"/></p>
+            <p>Amount of credit statement in May, 2005 <input type ="number" name = "CREDIT_AMT5" value="1222"/></p>
+            <p>Amount of credit statement in April, 2005 <input type ="number" name = "CREDIT_AMT6" value="1000"/></p>
+            <p><input type = "submit" value = "submit" /></p>
+        </form>      
+    </body>
+    </html>
+{% endblock %}

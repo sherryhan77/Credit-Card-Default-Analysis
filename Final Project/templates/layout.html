@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% block head %}
+      <title>Credit Card Default</title>
+      <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}">
+    {% endblock %}
+  </head>
+<body>
+    <nav class="navbar sticky-top navbar-light" style="background-color: rgb(255, 250, 234);">
+        <span class="navbar-text">
+            <img src="https://images.mysecuritysign.com/img/lg/L/debit-credit-card-accepted-label-lb-2066.png" width="35" height="25" class="d-inline-block align-
+                                                                                                           top" alt="">
+           <b>Default Payment of Credit Card Clients</b> </span>
+      </nav>
+    <div class="alert alert-secondary" role="alert">
+    </div>
+  <div class=header>
+    <h1 style="color:black;">Credit Card Default Data Analysis</h1>
+  </div>
+  <div>
+  </div>
+  <div class=page>
+    {% block content %}{% endblock %}
+  </div>
+  <div class=footer>
+    {% block footer %}
+      <span>All rights reserved</span>
+    {% endblock %}
+  </div>
+</body>

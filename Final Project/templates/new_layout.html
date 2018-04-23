@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML basics</title>
+  <link rel="stylesheet" type="text/css" href="HW3.css" media="screen" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <nav class="navbar sticky-top navbar-light" style="background-color: rgb(255, 250, 234);">
+    <span class="navbar-text">
+        <img src="https://images.mysecuritysign.com/img/lg/L/debit-credit-card-accepted-label-lb-2066.png" width="35" height="25" class="d-inline-block align-
+                                                                                                       top" alt="">
+       <b>Default Payment of Credit Card Clients</b> 
+    </span>
+    
+    <ul class="nav nav-pills" style="background-color: rgb(255, 250, 234);">
+        <a href="{{ link1[0].href }}">Visualization</a></li>
+    </ul>
+
+    <ul class="nav nav-pills" style="background-color: rgb(255, 250, 234);">
+        <a href="{{ link1[1].href }}">Data</a></li>
+    </ul>
+
+    <ul class="nav nav-pills" style="background-color: rgb(255, 250, 234);">
+        <a href="{{ link2[0].href }}">Prediction</a></li>
+    </ul>
+    
+
+  </nav>
+  <!-- Add icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <h1 class="title">Credit Card Fraud Detection</h1>
+
+  
+  <div class="alert alert-secondary" role="alert">
+  <div id="carouselExampleIndicators" class="carousel slide row" data-ride="carousel">
+    <div class="col-2"></div>
+    <div class="col-8">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active ">
+          <img class="d-block w-100" src="http://www.moneygossips.com/wp-content/uploads/2016/08/How-to-Consolidate-Credit-Card-Debt.jpg" alt="Third slide">
+        </div>
+        <div class="carousel-item ">
+          <img class="d-block w-100" src="https://accelerator-origin.kkomando.com/wp-content/uploads/2016/05/shutterstock_337566815-970x546.jpg" alt="Pembroke Welsh Corgi">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <div class="col-2"></div>
+  </div>
+  </div>
+  
+  <br>
+
+  <div class="alert alert-primary" role="alert">
+    <h2>
+      <i class="em em-blue_book"></i>Overview On the Data Set</h2>
+    <p>We used the data set from UCI Default of Credit Card Clients data set to preditct the defult rate of a card application. The attributes of the data set include the serveral features: <br/>
+        X1: Amount of the given credit (NT dollar): it includes both the individual consumer credit and his/her family (supplementary) credit. <br/>
+        X2: Gender (1 = male; 2 = female). <br/>
+        X3: Education (1 = graduate school; 2 = university; 3 = high school; 4 = others). <br/>
+        X4: Marital status (1 = married; 2 = single; 3 = others). <br/>
+        X5: Age (year). <br/>
+        X6 - X11: History of past payment. We tracked the past monthly payment records (from April to September, 2005) as follows: X6 = the repayment status in September, 2005; X7 = the repayment status in August, 2005; . . .;X11 = the repayment status in April, 2005. The measurement scale for the repayment status is: -1 = pay duly; 1 = payment delay for one month; 2 = payment delay for two months; . . .; 8 = payment delay for eight months; 9 = payment delay for nine months and above. <br/>
+        X12-X17: Amount of bill statement (NT dollar). X12 = amount of bill statement in September, 2005; X13 = amount of bill statement in August, 2005; . . .; X17 = amount of bill statement in April, 2005. <br/>
+        X18-X23: Amount of previous payment (NT dollar). <br/>
+        X18 = amount paid in September, 2005; X19 = amount paid in August, 2005; . . .;X23 = amount paid in April, 2005. <br/>
+    </p>
+  </div>
+
+  <div class="alert alert-info" role="alert">
+    <h2>
+      <i class="em em-point_right"></i>Distribution of the Data Set</h2>
+      <div id="banner" style="overflow: hidden; display: flex; justify-content:space-around;">
+          <div class="inline-block">
+              <img class="mx-auto d-block" src="https://github.com/sherryhan77/Green-Cab-Analysis/blob/master/images/AGE.png?raw=true"width=90% alt="age_default">
+          </div>
+      
+          <div class="inline-block">
+              <img class="mx-auto d-block" src="https://github.com/sherryhan77/Green-Cab-Analysis/blob/master/images/EDUCATION.png?raw=true"width=90% alt="age_default">
+          </div>
+      </div>
+      <div id="banner" style="overflow: hidden; display: flex; justify-content:space-around;">
+          <div class="inline-block">
+              <img class="mx-auto d-block" src="https://github.com/sherryhan77/Green-Cab-Analysis/blob/master/images/MARRIAGE.png?raw=true"width=90% alt="age_default">
+          </div>
+      
+          <div class="inline-block">
+              <img class="mx-auto d-block" src="https://github.com/sherryhan77/Green-Cab-Analysis/blob/master/images/SEX.png?raw=true"width=90% alt="age_default">
+          </div>
+      </div>
+
+      <h1><i class="em em-chart_with_upwards_trend"></i>Graph Genearor</h1>
+      {% for link in link1 %}
+        <b><a href ="{{ link.href }}">{{ link.label }}</a></b><br>
+      {% endfor %}
+  </div>
+
+  <div class="alert alert-success" role="alert">
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+    <h2>
+      <i class="em em-computer"></i></i> Machine Learning Models Prediction</h2>
+    <img class="mx-auto d-block" src="https://github.com/sherryhan77/Green-Cab-Analysis/blob/master/images/ML_RESULTS.png?raw=true" alt="feed corgi" width=80%>
+
+    <h2><i class="em em-chart_with_upwards_trend"></i>Graph Genearor</h2>
+      {% for link in link2 %}
+        <b><a href ="{{ link.href }}">{{ link.label }}</a></b><br>
+      {% endfor %}
+  </div>
+
+  <div class="alert alert-success" role="alert">
+    <h2>
+      <i class="em em-bookmark_tabs"></i>Techinques We have Used</h2>
+    <ul>
+      <li>Pandas</li>
+      <li>numpy</li>
+      <li>Data Clening</li>
+      <li>Data Visualiztion</li>
+      <li>Machien Learning</li>
+
+    </ul>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

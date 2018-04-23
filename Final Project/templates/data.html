@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block content %}
+	<div >
+      <table  style="width:80%" align="center">
+      
+     	<thead>
+     		<tr><th>ID</th><th>AGE</th><th>SEX</th>  <th>EDUCATION</th><th>MARRIAGE</th><th>default payment next month</th>  </tr>
+     	</thead>
+
+        <tbody>
+
+		{% for table in df %}
+        	<tr><td>{{table[0]}}</td> <td>{{table[1]}}</td> <td>{{table[2]}}</td><td>{{table[3]}}</td> <td>{{table[4]}}</td> <td>{{table[5]}}</td></tr>
+            {% endfor %} 
+
+        </tbody>
+
+
+     </table>
+
+
+
+
+
+		
+	</div>
+  <div class="actions">
+  	<a href="/data">Back</a>
+  </div>
+{% endblock %}
